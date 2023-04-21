@@ -90,6 +90,10 @@ function choixLettres(lettre){
     if(compteur == mot1Split.length){
         document.getElementById('gagner_perdu').style.display = "block";
         document.getElementById('gagner_perdu').textContent="Bien Jouer, Vous avez gagné !!!";
+        const buttons = document.querySelectorAll('.reset_color');
+        buttons.forEach((btn) => {
+            btn.setAttribute("disabled", true);
+        });
     }
     if(compteurErreur == 6){
         document.getElementById('gagner_perdu').style.display = "block";
