@@ -1,0 +1,106 @@
+@font-face {
+    font-family: "Mafia";
+    src: url(../fonts/TheGodfather-rgRK.ttf);
+}
+
+:root{
+    --color-red: rgb(156, 9, 9);
+    --color-white: rgb(255, 255, 255);
+}
+*{ 
+    user-select: none; /* Propriété standard */
+    font-family: 'Six Caps', sans-serif;
+}
+/*************Mon Body**************/
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image:url(../img/BG_Mafia.jpg);
+    background-size: cover;
+    align-items: center;
+}
+/*************Mon titre*****************/
+#titre{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+/*************Nom du Pendu**************/
+#nom_du_jeu{
+    font-size: 100px;
+    color: var(--color-red);
+    position: absolute;
+}
+#img_mafia{
+    width: 250px;
+    height: 200px;
+}
+/*************Le Mot**************/
+#mot{
+    display: flex;
+}
+p{
+    margin: 17px;
+    margin-top: 17px;
+    margin-right: 17px;
+    margin-bottom: 17px;
+    margin-left: 17px;
+    position: relative;
+    color: transparent;
+    font-size: 100px;
+}
+p::after{
+    content: ' ';
+    display: block;
+    position: absolute;
+    bottom: auto;
+    right: auto;
+    width: 40px;
+    height: 5px;
+    background-color: var(--color-white);
+}
+/*************Gagner Perdu**********/
+#gagner_perdu{
+    display: none;
+    background-color: var(--color-red);
+    font-size: 30px;
+    border: solid #000;
+    border-radius: 10px;
+    padding: 20px;
+}
+/*************Clavier**************/
+#lettre{
+    display: none;
+}
+.reset_color{
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+}
+/*************Mauvaise Reponse**************/
+#mauvaise_reponses{
+    display: none;
+}
+/*************Tout les buttons**************/
+button{
+    background-color: var(--color-white);
+    border-radius: 20px;
+}
+/*************Button Démarrer**************/
+#demarrage{
+    align-items: center;
+    padding: 40px;
+    font-size: 40px;
+    background-color: var(--color-red);
+    margin: 30px;
+}
+/*************Button changer de mot**************/
+#changer_mot{
+    display: none;
+    align-items: center;
+    padding: 40px;
+    font-size: 40px;
+    background-color: var(--color-red);
+    margin: 30px;
+}
