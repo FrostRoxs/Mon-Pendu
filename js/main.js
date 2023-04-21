@@ -94,6 +94,10 @@ function choixLettres(lettre){
     if(compteurErreur == 6){
         document.getElementById('gagner_perdu').style.display = "block";
         document.getElementById('gagner_perdu').textContent="Vous avez Perdu, Recommencer une partie !";
+        const buttons = document.querySelectorAll('.reset_color');
+        buttons.forEach((btn) => {
+            btn.setAttribute("disabled", true);
+        });
         //location.reload();
     }
 }
@@ -106,6 +110,11 @@ function changerMot(){
     for(let resetColor of tableau3){
         resetColor.style.backgroundColor = "white";
         resetColor.removeAttribute("disabled");
+    }
+
+    if(document.querySelector('#gagner_perdu').style.display == "block")
+    {
+        document.querySelector('#gagner_perdu').style.display = "none";
     }
 }
     
